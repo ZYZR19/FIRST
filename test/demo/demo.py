@@ -25,23 +25,23 @@ import time
 # id  name   classname tagname xpath cssselector linktest particallinktest
 # 鼠标点击与键盘输入
 driver = webdriver.Firefox()
-driver.get("http://www.baidu.com")
-# time.sleep(2)
-# driver.find_element_by_id("kw").send_keys("我好想你哦")
-# time.sleep(2)
-# driver.find_element_by_id("kw").clear()
-# driver.find_element_by_id("kw").send_keys("你在干啥啊")
-# time.sleep(2)
-# 此处不用click操作百度一下 用submit
-#driver.find_element_by_id("su").submit()
-data = driver.find_element_by_xpath("/html/body/div[1]/div[1]/div[7]/div[2]/span[1]")
-data2=data.text
-print(data2)
-print("hello")
-#打印title 和url
-print (driver.title)
-print(driver.current_url)
-#智能等待 在5s中智能等待
-driver.implicitly_wait(3)
-
+driver.get("http://47.92.29.3:8080/musicplay/login.html")
+time.sleep(2)
+driver.find_element_by_css_selector("#user").send_keys("张雨蓉")
+time.sleep(2)
+driver.find_element_by_css_selector("#password").send_keys("1234")
+time.sleep(2)
+#此处不用click操作百度一下 用submit
+driver.find_element_by_css_selector("#submit").click()
+# data = driver.find_element_by_xpath("/html/body/div[1]/div[1]/div[7]/div[2]/span[1]")
+# data2=data.text
+# print(data2)
+# print("hello")
+# #打印title 和url
+# print (driver.title)
+# print(driver.current_url)
+# #智能等待 在5s中智能等待
+#driver.implicitly_wait(3)
+time.sleep(3)
 driver.quit()
+
