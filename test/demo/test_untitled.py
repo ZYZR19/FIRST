@@ -7,7 +7,7 @@ from selenium.webdriver.common.keys import Keys
 #录制的脚本
 # coding = utf-8
 from selenium import webdriver
-driver =webdriver.Firefox()
+driver =webdriver.Chrome()
 driver.get('http://www.baidu.com')
 driver.quit()
 
